@@ -17,3 +17,7 @@ def find_max_consecutive_ones(array: list[int]):
 
 nums = [1, 1, 0, 1, 1, 1]
 print(find_max_consecutive_ones(nums))
+
+# new test case:
+nums2 = [0,0,0]
+print(find_max_consecutive_ones(nums2))
