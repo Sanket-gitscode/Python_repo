@@ -15,3 +15,7 @@ def reversing_array(array : list[int,str]):
 #Test case 01 
 test_case_01 = [1,2,3]
 print(reversing_array(test_case_01))
+
+#Test case 02 
+test_case_02 = [10,20,30,40,50]
+print(reversing_array(test_case_02))
