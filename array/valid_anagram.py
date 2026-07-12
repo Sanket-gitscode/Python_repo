@@ -20,7 +20,6 @@ def is_anagaram(string1 : str , string2 : str):
             return False
     
     return True 
-    
 
 #Test case 01 
 s1 = "silent"
