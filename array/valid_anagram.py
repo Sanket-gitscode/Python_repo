@@ -16,14 +16,14 @@ def is_anagaram(string1 : str , string2 : str):
         
         char_freq[ch] -= 1
         
+        if char_freq[ch] < 0 :
+            return False
     
     return True 
     
 
-
-
 #Test case 01 
 s1 = "silent"
-s2 = "listenw"
+s2 = "listen"
      
 print(is_anagaram(s1,s2))
