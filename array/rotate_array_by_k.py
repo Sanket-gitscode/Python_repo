@@ -21,11 +21,3 @@ def rotate_arry_by_k(array : list[int], k : int):
 # Test case
 arr = [1,2,3,4,5]
 k = 2
-
-
-g = 0 
-for i in range(1,11):
-    print(f"g for now is {g}")
-    print(rotate_arry_by_k(arr,g))
-    g += 4
-    

@@ -16,6 +16,7 @@ def binary_search(array : list[int], target : int ):
         else: 
             right = mid - 1
             
+            
 #test case 01 
 arr = [4, 9, 15, 21, 28, 35, 42, 57, 63, 78, 91]
 tg = 57
