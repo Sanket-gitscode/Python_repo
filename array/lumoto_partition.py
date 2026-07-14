@@ -16,3 +16,7 @@ def lumto_partition(array : list[int]):
 #Test case 01 
 arr = [9, 3, 7, 1, 8, 2, 5, 6, 4]
 print(lumto_partition(arr))
+
+#Test case 02 
+arr2 = [35, 12, 89, 43, 67, 21, 95, 54, 78, 50]
+print(lumto_partition(arr2))
