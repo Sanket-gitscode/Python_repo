@@ -41,3 +41,12 @@ def is_palindrome_robust(text):
 
 #Test cases 02 for robust one 
 print(is_palindrome_robust("A man, a plan, a canal: Panama")) # -> True
+
+print(is_palindrome_robust('Hello of a world'))
+'''
+| Length            | Final pointer position |
+| ----------------- | ---------------------- |
+| Odd (`"abcde"`)   | `left == right`        |
+| Even (`"abcdef"`) | `left > right`         |
+
+'''

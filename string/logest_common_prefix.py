@@ -1,5 +1,8 @@
 def longest_common_prefix(strings : list):
     
+    if len(strings) < 1:
+        return None
+    
     check_word = strings[0]   #word use to check with other in strings
 
     for i in range(len(check_word)):
