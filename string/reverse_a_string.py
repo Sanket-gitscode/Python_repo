@@ -12,7 +12,21 @@ def reverse_a_string(text):
     reversed_text = "".join(char_list)
 
     return reversed_text
+
+
+def method_2_reverse(text):
     
+    rev_text =  ''
+    n = len(text)
+    
+    for i in range(n-1,-1,-1):
+        rev_text += text[i]
+        
+    return rev_text
+
+
+#Test case 01 
 text = "Hello World"
 print(reverse_a_string(text))
+print(method_2_reverse(text))
     
