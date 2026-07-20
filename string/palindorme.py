@@ -42,7 +42,31 @@ def is_palindrome_robust(text):
 #Test cases 02 for robust one 
 print(is_palindrome_robust("A man, a plan, a canal: Panama")) # -> True
 
-print(is_palindrome_robust('Hello of a world'))
+def is_palindrome_2(text):
+    left = 0
+    right = len(text) - 1
+
+    while left < right:
+
+        while left < right and not text[left].isalnum():
+            left += 1
+
+        while left < right and not text[right].isalnum():
+            right -= 1
+
+        if text[left].lower() != text[right].lower():
+            return False
+
+        left += 1
+        right -= 1
+
+    return True
+
+
+
+
+
+
 '''
 | Length            | Final pointer position |
 | ----------------- | ---------------------- |
