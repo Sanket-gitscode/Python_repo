@@ -1,17 +1,16 @@
 def longest_common_prefix(strings : list):
     
-    if len(strings) < 1:
-        return None
+    if len(strings) < 1 :
+        return False
     
-    check_word = strings[0]   #word use to check with other in strings
-
+    check_word = strings[0]
+    
     for i in range(len(check_word)):
         for j in strings[1:]:
-            if  i >= len(j) or check_word[i] != j[i]:
+            if i >= len(j) or check_word[i] != j[i]:
                 return check_word[:i]
     
-    return check_word                 
-        
+    return check_word
         
 #Test case 01 
 strs = ["flower","flow","flight"]
