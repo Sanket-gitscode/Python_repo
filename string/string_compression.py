@@ -1,3 +1,6 @@
+#using while loop 
+
+
 def compress_string(string : str):
     
     result = []
