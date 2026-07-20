@@ -19,7 +19,7 @@ def compress_string(string : str):
      
     result_string =  ''.join(result)
 
-    return result_string if len(string) > len(result_string) else string
+    return result_string if len(result_string) < len(string) else string
 
 
 s1 = "aabcccccaaa"
