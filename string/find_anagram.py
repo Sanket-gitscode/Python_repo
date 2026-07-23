@@ -1,9 +1,9 @@
-def checkInclusion( string1 : str, string2: str):
+def findanagram( string1 : str, string2: str):
     
     if len(string1) > len(string2):
         return False
     
-    
+    result = []
     left = 0 
     needed = [0] * 26
     window = [0] * 26 
@@ -21,9 +21,12 @@ def checkInclusion( string1 : str, string2: str):
             left += 1 
         
         if window == needed:
-            return True 
+            result.append(left)
     
-    return False
+    return result
 
-
-print(checkInclusion("ab", "eidbaooo"))
+#Test case 01
+s = "cbaebabacd"
+p = "abc"
+k = (findanagram(p,s))
+print(k)
