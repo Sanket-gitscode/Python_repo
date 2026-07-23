@@ -30,3 +30,6 @@ s = "cbaebabacd"
 p = "abc"
 k = (findanagram(p,s))
 print(k)
+
+for num in k:
+    print(s[num:num+len(p)])
