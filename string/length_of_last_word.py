@@ -13,8 +13,12 @@ def length_of_last_word(string : str):
     
     return length
 
+def lengthOfLastWord2(self, s: str) -> int:
 
+    wordlist = s.split()
+    last_word = wordlist[-1]
 
+    return len(last_word)
 
 #Test case 01 
 text = "Hello world"
