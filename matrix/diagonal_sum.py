@@ -1,3 +1,9 @@
+matrix = [
+    [10, 20, 30],  # matrix[0][0] = 10
+    [40, 50, 60],  # matrix[1][1] = 50
+    [70, 80, 90]   # matrix[2][2] = 90
+]
+
 def diagonal_sum_singlepass(array):
     
     n = len(array)
@@ -7,7 +13,6 @@ def diagonal_sum_singlepass(array):
         total += array[i][i]
     
     print(total)
-
 
 def diagonal_sum_twopass(array):
     
@@ -22,13 +27,6 @@ def diagonal_sum_twopass(array):
                 total += array[r][c]
 
     print(total)
-
-
-matrix = [
-    [10, 20, 30],  # matrix[0][0] = 10
-    [40, 50, 60],  # matrix[1][1] = 50
-    [70, 80, 90]   # matrix[2][2] = 90
-]
 
 diagonal_sum_singlepass(matrix)
 diagonal_sum_twopass(matrix)
