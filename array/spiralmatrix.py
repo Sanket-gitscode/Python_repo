@@ -1,32 +1,34 @@
-def spiral_matrix(array):
+def spiral_matrix(matrix):
     
     result = []
-    
-    top = 0 
-    bottom = len(array) -1 
-    left = 0 
-    right = len(array[0]) -1
 
-    while top <= bottom and left <= right:
-        
-        for col in range(left,right+1):
-            result.append(array[top][col])
-        
-        top += 1 
+    left = 0
+    right = len(matrix[0]) - 1
+    top = 0
+    bottom = len(matrix) - 1
 
-        for row in range(top,bottom +1):
-            result.append(array[row][right])
-    
-        right -= 1 
-        
-        for col in range(right,left-1,-1):
-            result.append(array[bottom][col])
-            
-        bottom -= 1
-        
+    while left <= right and top <= bottom:
+
+        # left -> right
+        for col in range(left, right + 1):
+            result.append(matrix[top][col])
+        top += 1
+
+        # top -> bottom
+        for row in range(top, bottom + 1):
+            result.append(matrix[row][right])
+        right -= 1
+
+        # right -> left
+        if top <= bottom:
+            for col in range(right, left - 1, -1):
+                result.append(matrix[bottom][col])
+            bottom -= 1
+
+        # bottom -> top
         if left <= right:
             for row in range(bottom, top - 1, -1):
-                result.append(array[row][left])
+                result.append(matrix[row][left])
             left += 1
 
     return result
