@@ -7,9 +7,7 @@
 4   5 
 
 '''
-
-
-#Left → ROOT/NODE → Right
+#Left -> Right -> ROOT/NODE
 
 class Node:
     def __init__(self,data):
