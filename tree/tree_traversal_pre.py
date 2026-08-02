@@ -2,7 +2,7 @@
 
 # PREORDER  ->   ROOT/NODE -> Left -> Right
 
-#Test tree
+#Test tree visual
 
 '''   
     1
