@@ -22,12 +22,13 @@ root.left.left = Node(4)
 def one_child(root):
     
     if root is None:
-        return 0 
-    
-    if (root.left is not None and root.right is None) or (root.right is not None and root.left is None):
-        return 1 + one_child(root.left) + one_child(root.right)
-    
-    return one_child(root.left) + one_child(root.right)
+        return 0
 
+    count = 0
+
+    if (root.left is not None and root.right is None) or (root.left is None and root.right is not None):
+        count = 1
+
+    return count + one_child(root.left) + one_child(root.right)
 
 print(one_child(root))
