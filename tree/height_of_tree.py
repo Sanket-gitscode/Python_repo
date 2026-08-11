@@ -18,7 +18,6 @@ root.right = Node(3)
 
 root.left.left = Node(4)
 root.left.right = Node(5)
-root.left.left.left  = Node(6)
 
 def height_of_tree(root):
     
