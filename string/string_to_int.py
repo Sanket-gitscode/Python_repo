@@ -1,34 +1,40 @@
-def string_to_int(string : str) -> int:
-    
-    result = 0 
+def string_to_int(string: str) -> int:
+    result = 0
     started = False
-    sign = 1  
-    
+    sign = 1
+    sign_seen = False
+
     for ch in string:
-        
-        if started is False and ch.isspace():
+
+        # Skip leading spaces
+        if not started and not sign_seen and ch.isspace():
             continue
-        
-        if started == False:
+
+        # Handle sign
+        if not started and not sign_seen:
             if ch == "-":
-                sign = -1 
+                sign = -1
+                sign_seen = True
                 continue
-            
+
             if ch == "+":
-                sign = 1 
+                sign = 1
+                sign_seen = True
                 continue
-        
+
+        # Stop at first non-digit
         if not ch.isdigit():
             break
-    
-        started = True
-        
-        ch_in_int = int(ch)
-        
-        result = result * 10 + ch_in_int
-        
-    result = result * sign
 
+        # We are now reading the number
+        started = True
+
+        digit = int(ch)
+        result = result * 10 + digit
+
+    result *= sign
+
+    # 32-bit signed integer range
     if result > 2147483647:
         return 2147483647
 
@@ -36,9 +42,3 @@ def string_to_int(string : str) -> int:
         return -2147483648
 
     return result
-        
-
-
-s = '989887778787'
-
-print(string_to_int(s))
