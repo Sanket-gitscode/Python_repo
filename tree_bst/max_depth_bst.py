@@ -28,9 +28,7 @@ def max_depth_of_tree(root):
     left_sub_tree = max_depth_of_tree(root.left)
     right_sub_tree = max_depth_of_tree(root.right)
     
-    return 1 + max(left_sub_tree,right_sub_tree)
-    
-    
+    return 1 + max(left_sub_tree,right_sub_tree) #we add 1 for node itself and we use max for tree with maxdepth
     
     
     
