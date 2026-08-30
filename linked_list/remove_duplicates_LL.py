@@ -21,5 +21,6 @@ def remove_duplicates_LL(head):
     
     return head 
 
-k = (remove_duplicates_LL(head))
-print(k.val,k.next.val)
+reuslt = (remove_duplicates_LL(head))
+
+print(reuslt.val, reuslt.next.val)
