@@ -21,10 +21,7 @@ def sortedArrayToBST(nums: list[int]):
         
     return helper(0, len(nums) - 1)
 
-
-print(sortedArrayToBST([1,2,3,4,5,6,7,8]))
-
-
+# to visualize the tree you just made through list 
 from collections import deque
 
 def print_tree(root):
@@ -50,6 +47,6 @@ def print_tree(root):
         
     print(result)
 
-# Run it with your function
+# we are passing for root value
 root = sortedArrayToBST([1, 2, 3, 4, 5, 6, 7, 8])
 print_tree(root)
