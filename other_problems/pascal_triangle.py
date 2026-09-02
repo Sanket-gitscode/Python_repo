@@ -45,7 +45,7 @@ def pascal_traingle2( rowIndex: int):     # bad solution but works as we build t
         return triangle[rowIndex]
     
     
-def pascal_traingle2_better(rowIndex: int):
+def pascal_traingle2_better(rowIndex: int): #better soltuion
     row = [1]
 
     for i in range(1,rowIndex+1):
