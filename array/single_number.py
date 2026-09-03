@@ -11,8 +11,18 @@ def single_numner(array : list[int]) -> int:
             return key
 
 
+def single_number(array : list[int]) -> int :
+    
+    
+    result = 0 
+    
+    for nums in array:
+        result ^= nums
+    return result
+    
 
 
 #test array 1 
 arr = [4,1,2,1,2]
+print(single_numner(arr))
 print(single_numner(arr))
