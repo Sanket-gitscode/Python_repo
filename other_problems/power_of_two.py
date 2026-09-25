@@ -11,8 +11,12 @@ def power_of_two(number : int):
         
     return False
     
+def isPowerOfTwo( n: int) -> bool:
+    return n > 0 and (n & (n - 1)) == 0
+        
     
 #tets case 01 
-x = 10
+x = 8
 
 print(power_of_two(x))
+print(isPowerOfTwo(16))
